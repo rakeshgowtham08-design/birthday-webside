@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday Jichu 💗</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💗</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="stage" id="stage">
+
+  <div class="scene active" id="scene0">
+    <h1 class="cursive" style="display:flex;align-items:center;gap:14px;justify-content:center;flex-wrap:wrap;">Happy Birthday, Jichu <span class="pulse" style="font-size:.7em;">❤️</span></h1>
+    <div class="cake-card"><img src="images/bubu_dudu.jpg" alt="cute bear and panda birthday cake sticker" style="width:260px;max-width:70vw;border-radius:20px;display:block;"></div>
+    <p class="note">I created a little something just for you, Jichu, to celebrate how beautiful you make my life. Ready to see it?</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;position:relative;">
+      <button class="btn" id="yesBtn" onclick="yesClick(this,event)">Yes</button>
+      <button class="btn ghost" id="noBtn" onmouseover="dodge(this)" onclick="dodge(this)">No</button>
+    </div>
+  </div>
+
+  <div class="scene" id="scene1">
+    <h2 class="script">A gentle reminder floats just for Jichu</h2>
+    <h1 class="cursive">Pop the Balloons</h1>
+    <p class="note">and reveal a message from my heart for Jichu...</p>
+    <div class="balloons" id="balloonRow">
+      <span class="balloon" data-c="0" style="filter:hue-rotate(0deg) saturate(1.3);">🎈</span>
+      <span class="balloon" data-c="1" style="filter:hue-rotate(90deg) saturate(1.4);">🎈</span>
+      <span class="balloon" data-c="2" style="filter:hue-rotate(190deg) saturate(1.5);">🎈</span>
+      <span class="balloon" data-c="3" style="filter:hue-rotate(270deg) saturate(1.4);">🎈</span>
+    </div>
+    <div class="words" id="liveWords"></div>
+  </div>
+
+  <div class="scene" id="scene2">
+    <h2 class="script">A gentle reminder floats just for Jichu</h2>
+    <div class="words">
+      <span>Jichu</span><span>makes</span><span>life</span><span>beautiful</span>
+    </div>
+    <button class="btn" onclick="go(3)">Continue</button>
+  </div>
+
+  <div class="scene" id="scene3">
+    <h1 class="cursive">Make a wish, Jichu... 💗</h1>
+    <p class="note">Close your eyes, Jichu, and hold a special wish in your heart</p>
+    <div style="font-size:110px">🎂</div>
+    <button class="btn" onclick="go(4)">Continue</button>
+  </div>
+
+  <div class="scene" id="scene4">
+    <h1 class="cursive">For Jichu, who brings beauty to my world 🌷</h1>
+    <p class="note">Each icon holds a reason why Jichu is so special to me</p>
+    <div class="icon-row" id="iconRow">
+      <div class="icon-btn" data-r="You have such a beautiful and caring heart 💗">❤️</div>
+      <div class="icon-btn" data-r="Being around you makes everything feel magical ✨">✨</div>
+      <div class="icon-btn" data-r="Your smile can instantly make my whole day better 😊">😊</div>
+      <div class="icon-btn" data-r="You're one in a million, my star ⭐">⭐</div>
+    </div>
+    <p id="reasonText">✨ Tap the icons above to reveal why I love you, Jichu... ✨</p>
+    <button class="btn" onclick="go(5)">Continue</button>
+  </div>
+
+  <div class="scene" id="scene5">
+    <h2 class="script">A letter carrying all my love for Jichu...</h2>
+    <div class="envelope" id="envelope" onclick="openEnvelope(this)"><div class="flap"></div><div class="heart-seal">💗</div></div>
+    <p class="dim">Tap to open</p>
+  </div>
+
+  <div class="scene" id="scene6">
+    <h2 class="script">A letter carrying all my love for Jichu...</h2>
+    <div class="letter-card">
+      To my favorite person, Jichu 💗<br><br>
+      Happy Birthday, Jichu ❤️🎂<br><br>
+      You are the most beautiful part of my world — the comfort in my quiet moments, and the joy in my everyday. Every single day with you feels like a gift, and I am so incredibly lucky to have you in my life 🌸✨<br><br>
+      On your birthday, I wish you all the laughter, warmth, and peace that you bring into mine. I pray your days ahead are filled with happiness, and that every dream in your heart comes true 🌍💫<br><br>
+      Thank you for being you, Jichu, for being my safe space, and for making the world brighter just by existing 🌷🥹<br><br>
+      No matter where life takes us, I promise to stand by your side, to support you through everything, and to love you more with every passing day 💞<br><br>
+      Happy Birthday, sweetheart. I love you, Jichu, now and forever, beyond what words can ever say 💕
+    </div>
+    <button class="btn" onclick="go(7)">Continue</button>
+  </div>
+
+  <div class="scene" id="scene7">
+    <h1 class="cursive">One Last Thing... 🎁</h1>
+    <p class="note">A tiny token of my love, just for Jichu. Tap the gift to open it</p>
+    <div class="gift-box" id="giftBox" onclick="openGift(this,event)">🎁</div>
+  </div>
+
+  <div class="scene" id="scene8">
+    <div class="photo-wrap"><img class="final-photo" id="finalPhoto" src="images/cat_sticker.jpg" alt="cute cat"></div>
+    <h1 class="cursive">Lots of love for Jichu 💗</h1>
+    <p class="note">Once again, Happy Birthday, Jichu!<br>💕 You mean everything to me, and I hope this little surprise made you smile.</p>
+    <button class="btn ghost" onclick="go(0)">↻ Replay</button>
+  </div>
+
+</div>
+
+<button class="music-btn" id="musicBtn" onclick="toggleMusic()" aria-label="Toggle music">🔇</button>
+
+<script src="script.js"></script>
+</body>
+</html>
