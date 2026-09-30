@@ -239,4 +239,3 @@ function toggleMusic(){
   }
   setMusicIcon();
 }
-
